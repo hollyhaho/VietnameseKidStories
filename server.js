@@ -13,7 +13,8 @@ app.get("/stories", function(req, res){
    service.getChildrenStories()
     .then(function(data){
         // console.log(data)
-        // console.log(data.length)
+        console.log(data.length)
+        console.log(data)
         res.send(data)
     })
 })
