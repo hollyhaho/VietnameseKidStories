@@ -2,10 +2,10 @@ const rp = require('request-promise');
 const cheerio = require('cheerio')
 
 var urls = [
-    "https://vietbao.com/p131/1/thieu-nhi?_=1527124839180",
-    "https://vietbao.com/p131/2/thieu-nhi?_=1527124839181",
-    "https://vietbao.com/p131/3/thieu-nhi?_=1527124839182",
-    "https://vietbao.com/p131/4/thieu-nhi?_=1527124839183",
+    "https://vietbao.com/p131/1/thieu-nhi",
+    "https://vietbao.com/p131/2/thieu-nhi",
+    "https://vietbao.com/p131/3/thieu-nhi",
+    "https://vietbao.com/p131/4/thieu-nhi",
 ]
 var childrenStoriesRAW = []
 var childrenStoriesFormated = {}

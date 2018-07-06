@@ -8,7 +8,7 @@ $(document).ready(function() {
             var image = document.createElement("IMG")
             image.src = story.image
             console.log(image.src)
-            $(".images").append(image)
+            // $(".images").append(image)
        });
       });
  
