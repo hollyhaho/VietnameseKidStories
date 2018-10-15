@@ -5,7 +5,7 @@ const Promise = require('bluebird');
 var urls = generateUrls();
 function generateUrls(){
     var urls = []
-    for (var i = 1; i < 5; i++) {
+    for (var i = 1; i < 100; i++) {
         var link = 'https://vietbao.com/p131/' + i + "/thieu-nhi"
         urls.push(link)
     }
