@@ -1,8 +1,10 @@
 # VietnameseKidStories
 
 To run project:
+```
 npm install
 nodemon server.js
+```
 
 # API Calls
 
