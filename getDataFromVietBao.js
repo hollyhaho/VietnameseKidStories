@@ -5,7 +5,7 @@ const Promise = require('bluebird');
 var urls = generateUrls();
 function generateUrls(){
     var urls = []
-    for (var i = 1; i < 100; i++) {
+    for (var i = 1; i < 30; i++) {
         var link = 'https://vietbao.com/p131/' + i + "/thieu-nhi"
         urls.push(link)
     }
@@ -111,8 +111,16 @@ function parseHTML(htmlString) {
         var title = $("div.pl_row div.pl_title a")[i].attribs.title;
         var link = "https://vietbao.com/" + $("div.pl_row div.pl_title a")[i].attribs.href;
         var date = $("div.pl_row span.pl_date").eq(i).html();
-        var image
+        
+        var shortDescription;
+        if ($("div.pl_row div.pl_brief")[i].children[0] === undefined){
+            shortDescription = "no description"
+        } else {
+            shortDescription = $("div.pl_row div.pl_brief")[i].children[0].data
+        }
 
+        console.log(shortDescription);
+        var image
         if ($("div.pl_row div.pl_thumbnail img")[i] === undefined ) {
             image = null 
         } else {
@@ -123,7 +131,8 @@ function parseHTML(htmlString) {
             title: title,
             link: link,
             date: date,
-            image: image
+            image: image,
+            shortDescription: shortDescription
         };
         childrenStoriesRAW.push(newStory);
     }
